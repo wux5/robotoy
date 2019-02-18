@@ -5,10 +5,10 @@ light = SearchLight()
 
 try:
     while True:
-        rgb = input("Enter RGB values(for example: 0 100 0):")
+        rgb = input("Enter RGB values(for example: 0 0.5 0):")
         rgb = rgb.split(' ')
         try:
-            light.change_color(int(rgb[0]), int(rgb[1]), int(rgb[2]))
+            light.color = (float(rgb[0]), float(rgb[1]), float(rgb[2]))
         except:
             pass
 except KeyboardInterrupt:
