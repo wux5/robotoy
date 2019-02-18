@@ -28,3 +28,7 @@ LED_B = 24
 # UltraSonic Sensor
 ULTRASONIC_ECHO = 0
 ULTRASONIC_TRIGGER = 1
+
+# Infrared Sensors
+INFRARED_LEFT = 12
+INFRARED_RIGHT = 17
