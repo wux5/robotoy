@@ -3,8 +3,10 @@
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "editor.fontLigatures": true,
-  "prettier.useTabs": true,
-  "prettier.tabWidth": 4,
   "files.trimFinalNewlines": true,
-  "files.insertFinalNewline": true
+  "files.insertFinalNewline": true,
+  "python.pythonPath": "python",
+  "python.linting.pylintEnabled": true,
+  "python.linting.enabled": true,
+  "python.linting.pylintPath": "pylint"
 }

@@ -1,7 +1,9 @@
 from gpiozero import Robot as ZeroRobot
 from . import pins
+from ..singleton import singleton
 
 
+@singleton
 class Robot(ZeroRobot):
     def __init__(self):
         super().__init__(

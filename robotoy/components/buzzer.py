@@ -1,8 +1,10 @@
 from gpiozero import Buzzer as ZeroBuzzer
 from . import pins
 from time import sleep
+from ..singleton import singleton
 
 
+@singleton
 class Buzzer(ZeroBuzzer):
     def __init__(self):
         super().__init__(pins.BUZZER, initial_value=True)

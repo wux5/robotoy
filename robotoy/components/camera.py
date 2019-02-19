@@ -1,8 +1,10 @@
 from subprocess import call
 from pathlib import Path
 from datetime import datetime
+from ..singleton import singleton
 
 
+@singleton
 class Camera():
     def __init__(self):
         Path('./captures').mkdir(parents=True, exist_ok=True)

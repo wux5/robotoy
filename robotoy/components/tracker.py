@@ -1,7 +1,9 @@
 from . import pins
 from gpiozero import GPIODevice
+from ..singleton import singleton
 
 
+@singleton
 class Tracker():
     def __init__(self):
         self.left1_sensor = GPIODevice(pins.TRACK_LEFT_1)

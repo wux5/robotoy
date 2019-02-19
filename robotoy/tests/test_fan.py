@@ -1,8 +1,14 @@
+from time import sleep
 from ..components.fan import Fan
 from ..components.button import Button
 
 fan = Fan()
 button = Button()
+
+fan.on()
+sleep(1)
+fan.off()
+print('Press button to turn on/off.')
 
 try:
     while True:
