@@ -68,7 +68,7 @@ rsync --filter=':- .gitignore' -rvza --progress --force \
        ${LOCAL_PATH} ${REMOTE_SSH_PATH}
 echo -e "${green}""Done.""${nocolor}"
 
-fswatch -0 -r -l ${DELAY} -e '\.tmp_files' -e'\.idea' -e'\.git' -e '.*___' -o '\.py' . | while read -d "" event
+fswatch -0 -r -l ${DELAY} -e '\.tmp_files' -e'\.idea' -e'\.git' -e '.*___' -o '\.py|\.wav' . | while read -d "" event
   do
      echo $event > .tmp_files
      echo -en "${green}"`date` "${nocolor}'$event' changed. Synchronizing... "
