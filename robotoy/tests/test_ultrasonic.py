@@ -1,7 +1,23 @@
 from ..components.ultrasonic import UltraSonic
-from time import sleep
+from ..components.searchlight import SearchLight
+from signal import pause
+from ..components import sound
 
 s = UltraSonic()
-while True:
-    print('Distance: ', s.distance * 100)
-    sleep(1)
+led = SearchLight()
+
+
+def on():
+    led.on()
+    sound.play("./sound/maybe-next-time.wav", -1)
+
+
+def off():
+    led.off()
+    sound.stop()
+
+
+s.when_in_range = on
+s.when_out_of_range = off
+
+pause()

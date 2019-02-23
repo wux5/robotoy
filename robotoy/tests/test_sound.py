@@ -1,4 +1,8 @@
 from ..components.sound import play
 from signal import pause
 
-play('./sound/maybe-next-time.wav')
+while True:
+    input("go")
+    play('./sound/maybe-next-time.wav')
+
+pause()

@@ -7,12 +7,16 @@ from time import sleep
 # https://www.sigmdel.ca/michel/ha/rpi/bluetooth_02_en.html
 
 
-def play(file):
+def play(file, count=0):
     try:
-        mixer.init()
+        if not mixer.get_init():
+            mixer.init()
         mixer.music.load(file)
-        mixer.music.play()
-        while mixer.music.get_busy() == True:
-            sleep(0.5)
-    finally:
+        mixer.music.play(count)
+    except Exception as ex:
+        print(ex)
+
+
+def stop():
+    if mixer.get_init():
         mixer.quit()
