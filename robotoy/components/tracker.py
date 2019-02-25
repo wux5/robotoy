@@ -1,4 +1,4 @@
-from . import pins
+from .. import pins
 from gpiozero import GPIODevice
 from ..singleton import singleton
 

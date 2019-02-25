@@ -1,5 +1,5 @@
 from gpiozero import Buzzer as ZeroBuzzer
-from . import pins
+from .. import pins
 from time import sleep
 from ..singleton import singleton
 

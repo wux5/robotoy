@@ -1,5 +1,5 @@
 from gpiozero import OutputDevice
-from . import pins
+from .. import pins
 from ..singleton import singleton
 
 

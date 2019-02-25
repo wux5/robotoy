@@ -1,5 +1,5 @@
 from gpiozero import Robot as ZeroRobot
-from . import pins
+from .. import pins
 from ..singleton import singleton
 
 

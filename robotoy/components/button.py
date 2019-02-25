@@ -1,5 +1,5 @@
 from gpiozero import Button as ZeroButton
-from . import pins
+from .. import pins
 from ..singleton import singleton
 
 

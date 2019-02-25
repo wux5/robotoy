@@ -1,7 +1,7 @@
-from ..components.searchlight import SearchLight
+from ..components.headlight import Headlight
 from signal import pause
 
-light = SearchLight()
+light = Headlight()
 
 try:
     while True:

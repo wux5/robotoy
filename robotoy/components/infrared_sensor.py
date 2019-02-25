@@ -1,5 +1,5 @@
 from gpiozero import LineSensor
-from . import pins
+from .. import pins
 from ..singleton import singleton
 
 

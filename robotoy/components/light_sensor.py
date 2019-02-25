@@ -1,5 +1,5 @@
 from gpiozero import LightSensor
-from . import pins
+from .. import pins
 from ..singleton import singleton
 
 

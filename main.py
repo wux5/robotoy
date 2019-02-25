@@ -1,10 +1,18 @@
-from robotoy.components import pins
+#!/usr/bin/python3
+
+from robotoy.projects import autodrive
+import sys
 
 
-def main():
-    print(pins.MOTOR_LEFT_BACK)
+def main(arg):
+    projects = {
+        "autodrive": autodrive.run
+    }
+    projects[arg]()
 
 
 if __name__ == "__main__":
-
-    main()
+    try:
+        main(sys.argv[1])
+    except KeyboardInterrupt:
+        print("Good bye.")
